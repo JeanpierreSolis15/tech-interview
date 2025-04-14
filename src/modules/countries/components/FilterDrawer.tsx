@@ -72,7 +72,7 @@ export default function FilterDrawer({ visible, onClose }: FilterDrawerProps) {
           // zIndex: 1001
         }}
       >
-        <View className="flex-1 p-4">
+        <View className="flex-1 p-4  mt-8">
           <View className="flex-row justify-between items-center mb-4">
             <View className="flex-row items-center">
               {/* Se agrega style, porque al darle la clase, da error en el tipado del icono className="mr-2" */}

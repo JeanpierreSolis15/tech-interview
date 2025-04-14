@@ -148,3 +148,8 @@ React Native Picker: Para los selectores de continente y moneda en el drawer de 
 ![Captura Android 6](./src/assets/images/preview-android/6.png)
 
 ## Preview iOS ## 
+![Captura iOS 1](./src/assets/images/preview-ios/1.png)
+![Captura iOS 2](./src/assets/images/preview-ios/2.png)
+![Captura iOS 3](./src/assets/images/preview-ios/3.png)
+![Captura iOS 4](./src/assets/images/preview-ios/4.png)
+![Captura iOS 5](./src/assets/images/preview-ios/5.png)

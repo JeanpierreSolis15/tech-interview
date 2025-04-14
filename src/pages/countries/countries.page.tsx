@@ -48,7 +48,7 @@ export default function CountriesPage() {
     )
 
   return (
-    <SafeAreaView className="flex-1 bg-white mt-8 mb-4">
+    <SafeAreaView className="flex-1 bg-white mt-8 mb-8">
       <View className="p-4">
         <Text className="text-4xl font-bold text-gray-800">¡Un mundo en tu mano!</Text>
         <Text className="text-lg text-gray-600 mt-4">
