@@ -15,7 +15,7 @@ export default function CountryHeader({
 
   return (
     <View>
-      {/* <View className="relative px-4 py-2 mt-4">
+      <View className="relative px-4 py-2 mt-4">
         <FastImage
           source={{
             uri: imageUrl || PLACEHOLDER_IMAGE_URL,
@@ -43,7 +43,7 @@ export default function CountryHeader({
             <Text className="text-gray-800 text-lg">Error al cargar la imagen</Text>
           </View>
         )}
-      </View> */}
+      </View>
 
       <View className="px-4 py-2">
         <TouchableOpacity className="bg-white rounded-lg shadow-md p-4 flex-row items-center">

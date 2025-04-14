@@ -138,3 +138,13 @@ React Native Paper: Proporciona componentes de UI como Button, Card, IconButton,
 NativeWind (Tailwind CSS para React Native): Para aplicar estilos modernos y responsivos con clases de Tailwind (ej. bg-white, rounded-lg, shadow-md).
 
 React Native Picker: Para los selectores de continente y moneda en el drawer de filtros.
+
+## Preview Android ## 
+![Captura Android 1](./src/assets/images/preview-android/1.png)
+![Captura Android 2](./src/assets/images/preview-android/2.png)
+![Captura Android 3](./src/assets/images/preview-android/3.png)
+![Captura Android 4](./src/assets/images/preview-android/4.png)
+![Captura Android 5](./src/assets/images/preview-android/5.png)
+![Captura Android 6](./src/assets/images/preview-android/6.png)
+
+## Preview iOS ## 
