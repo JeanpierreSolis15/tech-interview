@@ -139,17 +139,27 @@ NativeWind (Tailwind CSS para React Native): Para aplicar estilos modernos y res
 
 React Native Picker: Para los selectores de continente y moneda en el drawer de filtros.
 
-## Preview Android ## 
-![Captura Android 1](./src/assets/images/preview-android/1.png)
-![Captura Android 2](./src/assets/images/preview-android/2.png)
-![Captura Android 3](./src/assets/images/preview-android/3.png)
-![Captura Android 4](./src/assets/images/preview-android/4.png)
-![Captura Android 5](./src/assets/images/preview-android/5.png)
-![Captura Android 6](./src/assets/images/preview-android/6.png)
+## Notas importantes ## 
+Gracias por la oportunidad de tomar la interview.
+- **Punto 1 de mejora** me hubiera encantado actualizar la seccion de filtros ya que https://countries.trevorblades.com cuenta con querys para realizar los filtros.
 
-## Preview iOS ## 
-![Captura iOS 1](./src/assets/images/preview-ios/1.png)
-![Captura iOS 2](./src/assets/images/preview-ios/2.png)
-![Captura iOS 3](./src/assets/images/preview-ios/3.png)
-![Captura iOS 4](./src/assets/images/preview-ios/4.png)
-![Captura iOS 5](./src/assets/images/preview-ios/5.png)
+- **Punto 2 de mejora** una disculpa la integracion con el hls.js al compilar a iOS es muy intermitente la funcionalidad, falta ajustar un poco en el script del dom para realizar bien la funcionalidad de reprodución de streaming.
+
+- **Punto 2 de mejora** estandarizar los tipos de errores, agregar un ErrorBoundary, como tambien crear un componente para los header y que sea compatible con iOS para que el notch no cause superposición. 
+
+## Preview Android
+
+<img src="./src/assets/images/preview-android/1.png" alt="Captura Android 1" width="300">
+<img src="./src/assets/images/preview-android/2.png" alt="Captura Android 2" width="300">
+<img src="./src/assets/images/preview-android/3.png" alt="Captura Android 3" width="300">
+<img src="./src/assets/images/preview-android/4.png" alt="Captura Android 4" width="300">
+<img src="./src/assets/images/preview-android/5.png" alt="Captura Android 5" width="300">
+<img src="./src/assets/images/preview-android/6.png" alt="Captura Android 6" width="300">
+
+## Preview iOS
+
+<img src="./src/assets/images/preview-ios/1.png" alt="Captura iOS 1" width="300">
+<img src="./src/assets/images/preview-ios/2.png" alt="Captura iOS 2" width="300">
+<img src="./src/assets/images/preview-ios/3.png" alt="Captura iOS 3" width="300">
+<img src="./src/assets/images/preview-ios/4.png" alt="Captura iOS 4" width="300">
+<img src="./src/assets/images/preview-ios/5.png" alt="Captura iOS 5" width="300">
