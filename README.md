@@ -1,97 +1,140 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Country Explorer 🌍
 
-# Getting Started
+Country Explorer es una aplicación móvil construida con React Native que permite explorar países de todo el mundo, filtrarlos por diferentes criterios y ver detalles específicos de cada país. 
+Este proyecto utiliza datos de la API GraphQL de `https://countries.trevorblades.com/` y la API de Unsplash para imágenes de países.
+Ademas de poder renderizar videos con React native video y HLS.js.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📋 Requisitos
 
-## Step 1: Start Metro
+Para levantar este proyecto en tu máquina local, necesitas cumplir con los siguientes requisitos:
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **Node.js**: Versión 18 o superior. Puedes descargarlo desde [nodejs.org](https://nodejs.org).
+- **npm** o **Yarn**: Gestor de paquetes para instalar dependencias (se recomienda Yarn para mejor rendimiento).
+- **React Native CLI**: Para ejecutar la aplicación en un emulador o dispositivo físico.
+- **Android Studio** o **Xcode**: Para emuladores de Android o iOS, respectivamente.
+- **Emulador o dispositivo físico**: Un emulador configurado (como Android Emulator o iOS Simulator) o un dispositivo físico para probar la app.
+- **Unsplash API Key**: (En el proyecto actual ya se tiene uno configurado con 45 cargas disponible ya que se encuentra en la capa free - Si en caso en la vista de detalle no carga una imagen en la parte superior es porque se agoto la cuota)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 🛠️ Estructura del Proyecto
 
-```sh
-# Using npm
-npm start
+El proyecto está diseñado con una estructura modular y escalable, típica de aplicaciones frontend desarrolladas con **React** y **TypeScript**, e integrando **Apollo Client** para la gestión de datos a través de una API GraphQL. A continuación, se detalla la organización de los directorios y archivos clave dentro del directorio raíz `src/`:
 
-# OR using Yarn
-yarn start
-```
+- **`src/`**: Directorio raíz que contiene todo el código fuente de la aplicación.
+  - **`assets/`**: Almacena recursos estáticos como imágenes, fuentes o cualquier otro archivo necesario para la interfaz de usuario.
+  - **`config/`**: Contiene archivos de configuración global, como ajustes de entorno o parámetros para conectar con servicios externos.
+  - **`declarations/`**: Incluye archivos de declaración de TypeScript (`.d.ts`), que definen tipos para bibliotecas externas o módulos personalizados, asegurando un tipado consistente.
+  - **`modules/`**: Agrupa módulos reutilizables o funcionalidades específicas de la aplicación.
+    - **`countries/`**: Módulo central dedicado a la gestión de datos y funcionalidades relacionadas con países.
+      - **`components/`**: Contiene componentes React específicos para mostrar o interactuar con datos de países.
+      - **`hooks/`**: Almacena hooks personalizados de React, probablemente para manejar lógica de estado o efectos relacionados con los países.
+      - **`types/`**: Define tipos TypeScript específicos del módulo `countries`, garantizando un código fuertemente tipado.
+      - **`services/`**: Contiene el archivo `apolloClient.ts`, que configura el cliente Apollo para realizar consultas y mutaciones a la API GraphQL.
+      - **`shared/`**: Incluye utilidades o componentes compartidos que pueden ser reutilizados en otras partes del proyecto.
+  - **`navigation/`**: Maneja la lógica de navegación, como la configuración de rutas o el flujo entre diferentes pantallas de la aplicación.
+  - **`pages/`**: Agrupa las páginas principales de la aplicación.
+    - **`countries/`**: Contiene el archivo `countries.page.tsx`, un componente de página escrito en TypeScript y React para mostrar una lista de países.
+  - **`providers/`**: Almacena proveedores de contexto o estado global (por ejemplo, usando la API de contexto de React) para compartir datos o lógica entre componentes.
+  - **`App.tsx`**: Archivo principal de la aplicación, escrito en TypeScript y React, que sirve como punto de entrada y coordina la renderización de los componentes principales.
 
-## Step 2: Build and run your app
+Esta estructura refleja un enfoque modular y bien organizado, donde cada funcionalidad tiene su propio espacio definido. El uso de **TypeScript** asegura un código robusto y menos propenso a errores, mientras que **Apollo Client** facilita la interacción con una API GraphQL para la gestión eficiente de datos. La separación de preocupaciones entre componentes, hooks, tipos, servicios y páginas hace que el proyecto sea fácil de mantener y escalar.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Pasos para Levantar el Proyecto 
+
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/JeanpierreSolis15/tech-interview.git
+   cd tech-interview
+2. **Instala las dependencias: Usando Yarn:**
+    ```bash
+    yarn install
+    O usando npm:
+    npm install
+## Paso 2: Compila y ejecuta tu app
+
+Con Metro ejecutándose, abre una nueva ventana/panel de terminal desde la raíz de tu proyecto React Native y usa uno de los siguientes comandos para compilar y ejecutar tu app de Android o iOS:
 
 ### Android
 
 ```sh
-# Using npm
+# Usando npm
 npm run android
 
-# OR using Yarn
+# O usando Yarn
 yarn android
 ```
 
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Para iOS, recuerda instalar las dependencias de CocoaPods (esto solo debe ejecutarse en el primer clon o después de actualizar las dependencias nativas).
 
 ```sh
-bundle install
+cd ios && pod install
 ```
 
-Then, and every time you update your native dependencies, run:
-
 ```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+# Usando npm
 npm run ios
 
-# OR using Yarn
+# O usando Yarn
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Configura el entorno de desarrollo:
+Asegúrate de tener un emulador abierto o un dispositivo conectado.
+Si usas Android, inicia el emulador desde Android Studio.
+Si usas iOS, inicia el simulador desde Xcode.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## ✨ Características Principales 
+Country Explorer incluye las siguientes características:
 
-## Step 3: Modify your app
+### Lista de Países: 
+- Muestra una lista de países obtenidos de la API GraphQL de https://countries.trevorblades.com/.
+- Cada país se presenta en un card con su bandera, nombre, código y continente.
 
-Now that you have successfully run the app, let's make changes!
+### Filtrado Avanzado:
+- Permite filtrar países por nombre (búsqueda), continente y moneda directamente desde el servidor GraphQL.
+- Los filtros se aplican al presionar "Aplicar Filtros" en el drawer, optimizando las solicitudes al servidor.
+** Drawer de Filtros: **
+- Un drawer lateral que permite seleccionar continentes y monedas para filtrar los países.
+- Los filtros se aplican de forma controlada, solo cuando el usuario confirma.
+### Página de Detalle del País: 
+- Al tocar un país, navegas a una página de detalle que muestra:
+- Una imagen del país obtenida de Unsplash.
+** Información básica (código, continente, capital, moneda). ** 
+- Lista de idiomas oficiales.
+- Código telefónico.
+** Carga Optimizada de Imágenes: ** 
+- Uso de FastImage para cargar imágenes de banderas y fotos de países de manera eficiente.
+- Lazy loading integrado para mejorar el rendimiento.
+- Integración con HLS.js donde renderizamos contenido de tipo HLS, incluye opciones como (play/pause, progreso).
+- Integración con react native video donde renderizamos contenido de tipo HLS,  incluye opciones como (play/pause, progreso).
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Diseño Responsivo y Moderno: 
+Uso de Tailwind CSS para estilos consistentes y responsivos.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 📚 Librerías Utilizadas ## 
+React Native: Framework principal para construir la aplicación móvil.
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+React Navigation: Para la navegación entre pantallas (lista de países y página de detalle).
 
-## Congratulations! :tada:
+Apollo Client: Para realizar consultas GraphQL a la API de países.
 
-You've successfully run and modified your React Native App. :partying_face:
+Zustand: Gestión de estado global (filtros, búsqueda, datos de países).
 
-### Now what?
+Axios: Para realizar solicitudes HTTP a la API de Unsplash.
+FastImage: Para la carga optimizada de imágenes (banderas y fotos de países).
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+React Native Vector Icons: Para íconos en la interfaz (como el ícono de filtro).
 
-# Troubleshooting
+React Native Video : Biblioteca React Native que proporciona un componente de video para renderizar contenido multimedia como videos y transmisiones.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+HLS.JS : HLS.js es una biblioteca de JavaScript que implementa un cliente de transmisión en vivo HTTP. Utiliza vídeo HTML5 y extensiones MediaSource para la reproducción.
 
-# Learn More
+## Librerías de Diseño ## 
+React Native Paper: Proporciona componentes de UI como Button, Card, IconButton, y otros elementos estilizados.
 
-To learn more about React Native, take a look at the following resources:
+NativeWind (Tailwind CSS para React Native): Para aplicar estilos modernos y responsivos con clases de Tailwind (ej. bg-white, rounded-lg, shadow-md).
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+React Native Picker: Para los selectores de continente y moneda en el drawer de filtros.
